@@ -1,0 +1,669 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+
+    /************Меню************/
+    .page-header-logo p {
+        font-size: 18px;
+    }
+
+    .page-header-logo span {
+        font-size: 12px;
+    }
+    .page-header-logo img{
+            margin-left: 0px;
+    margin-right: 8px;
+    }
+
+    a.order-call {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    li.site-list-item {
+        padding: 18px 22px;
+    }
+
+    .phone {
+        font-size: 20px;
+    
+    }
+
+    /***************Первая секция - заставка**************/
+    .top-image {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    .tabs-header {
+        margin-left: 30px;
+    }
+
+    h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    /************ Наши услуги ************/
+    .box p {
+        font-size: 16px;
+    }
+
+    /***********Вторая секция - отзывы***********/
+    .section-review {
+        margin-top: -414px;
+    }
+
+    /*************Третья секция - Остались вопросы*************/
+    .section-questions {
+        padding: 15px;
+    }
+
+    .questions-wrap h3 {
+        font-size: 26px;
+        line-height: 109px;
+    }
+
+    .quest-phone-wrap {
+        padding: 0 39px;
+    }
+
+    .quest-phone-wrap a {
+        font-size: 35px;
+        line-height: 53px;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+
+    /************Меню************/
+    .page-header {
+        height: 105px;
+    }
+
+    .fa-viber,
+    .fa-skype,
+    .fa-telegram,
+    .fa-linkedin,
+    .fa-odnoklassniki-square {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    button.menu-toggle {
+        display: block;
+    }
+
+    nav {
+        z-index: 1;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+
+    nav:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #79b433;
+        opacity: 0.9;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 100%;
+        -webkit-transform: scale(0.04), translateY(9999px);
+        -ms-transform: scale(0.04), translateY(9999px);
+        transform: scale(0.04), translateY(9999px);
+        overflow: hidden;
+    }
+
+    ul.menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        color: white;
+    }
+
+    ul.menu li {
+        opacity: 0;
+        text-align: center;
+        -webkit-transform: translate3d(0, -7px, 0);
+        transform: translate3d(0, -7px, 0);
+        cursor: pointer;
+    }
+
+
+
+    .site-list-item a {
+        color: #fff;
+    }
+
+    .page-header-logo p {
+        float: right;
+        padding-top: 37px;
+        line-height: 18px;
+    }
+
+    /***************Первая секция - заставка**************/
+    .section-top {
+        padding-top: 9px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .top-wrap {
+        margin-top: 70px;
+    }
+
+    .top-image {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    .top-image img.comp {
+        right: -18px;
+    }
+
+    .top-image img.laptop {
+        right: 83px;
+        top: 278px;
+    }
+
+    .overlay {
+        min-height: 1320px;
+    }
+
+    .bottom-line {
+        top: 917px;
+    }
+
+    /*****************Форма заявки*****************/
+    .request-form {
+        top: -160px;
+    }
+
+    /************ Наши услуги ************/
+    .boxes {
+        top: 40px;
+    }
+
+    .box p {
+        font-size: 18px;
+        letter-spacing: 0;
+        padding: 0 20px;
+    }
+
+    /************ Вторая секция - отзывы ************/
+    .section-review {
+        margin-top: -407px;
+    }
+    .slider {
+        width: 769px;
+    }
+
+    /*************Третья секция - Остались вопросы*************/
+    .questions-wrap {
+
+        padding-right: 31px;
+    }
+    .questions-wrap h3 {
+        font-size: 18px;
+        line-height: 143px;
+    }
+    .quest-phone-wrap {
+        padding: 0 28px;
+    }
+    .quest-phone-wrap p {
+        font-size: 19px;
+    }
+    .quest-phone-wrap a {
+        font-size: 34px;
+        line-height: 52px;
+    }
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+
+    /************Меню************/
+    .page-header {
+        height: 130px;
+    }
+
+    
+
+    a.order-call {
+      height: 28px;
+      position: absolute;
+      top: 92px;
+      left: 50%;
+      font-size: 11px;
+      transform: translate(-50%, 0);
+      line-height: 34px;
+      padding: 2px 1px;
+    }
+
+    .page-header-logo {
+        padding-left: 0;
+    }
+    .page-header-logo img {
+        margin: 42px 15px 0px 0px;
+        width: 60px;
+
+    }
+    ul.menu {
+        position: fixed;
+        top: 16%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: column;
+    }
+
+    /***************Первая секция - заставка**************/
+    h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .tab_content {
+        opacity: .95;
+    }
+
+    .top-wrap {
+        margin-top: 135px;
+        margin-right: 20px;
+    }
+
+    .top-image {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+
+    .top-image img.comp {
+        top: 17px;
+        right: 50px;
+    }
+
+    .top-image img.laptop {
+        display: none;
+    }
+
+    .overlay {
+        min-height: 2083px;
+    }
+
+    .bottom-line {
+        top: 1694px;
+    }
+
+    /*****************Форма заявки*****************/
+    .request-form {
+        top: -220px;
+    }
+
+    .form-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+
+    .form-wrap label {
+        width: 275px;
+    }
+    .form-wrap label input {
+        width: 100%;
+    }
+
+    /************ Наши услуги ************/
+    .boxes {
+        top: 165px;
+    }
+
+    .boxes h2 {
+        margin-bottom: 65px;
+        margin-top: 60px;
+        font-size: 35px;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+    .box:nth-child(3),
+    .box:nth-child(6) {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .box:nth-child(4),
+    .box:nth-child(5) {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+
+    /************ Вторая секция - отзывы ************/
+    .section-review {
+        margin-top: -410px;
+        padding-bottom: 27px!important;
+    }
+    .section-review h2 {
+        font-size: 35px;
+        margin-bottom: 14px;
+    }
+    .owl-carousel .owl-item img {
+        width: 140px;
+        height: 140px;
+    }
+    .slider {
+        transform: scale(0.9);
+        width: 505px;
+        padding: 0;
+    }
+
+    .slide-text {
+        padding: 0 24px;
+    }
+
+    /*************Третья секция - Остались вопросы*************/
+    .section-questions {
+        height: 297px;
+        padding: 20px 15px;
+    }
+    .questions-wrap {
+        flex-direction: column;
+        padding-right: 0;
+    }
+    .questions-wrap h3 {
+        font-size: 20px;
+        line-height: 10px;
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .quest-phone-wrap a {
+        font-size: 31px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    .quest-btn-wrap .order-call {
+        width: 175px;
+        line-height: 28px;
+        margin: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /***************Четвертая секция - Карта***************/
+    .top-map h2 {
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+    .top-map p {
+        font-size: 25px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+
+    /************Меню************/
+    .phone {
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+
+
+
+    .page-header-logo {
+        padding-left: 2px;
+    }
+    .order-call {
+        font-size: 10px;
+    }
+
+    /************ Наши услуги ************/
+    .boxes h2 {
+        margin-bottom: 41px;
+        margin-top: 76px;
+    }
+
+    .boxes p {
+        line-height: 22px;
+    }
+
+    .boxes-wrap .box {
+        padding-bottom: 0;
+    }
+    /***************Первая секция - заставка**************/
+    h1 {
+        font-size: 25px;
+    }
+
+    .tabs-header {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        margin-left: 0;
+        margin-top: 361px;
+    }
+
+    .tabs {
+        letter-spacing: 1.2px;
+    }
+
+    .tab_content {
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .top-image img.comp {
+        top: -53px;
+        right: 50px;
+    }
+
+    .overlay {
+        min-height: 2076px;
+    }
+
+    .bottom-line {
+        top: 1701px;
+    }
+
+    /************ Вторая секция - отзывы ************/
+    .section-review {
+        margin-top: -430px;
+    }
+    .section-review h2 {
+        line-height: 40px;
+        padding: 0 10px;
+    }
+    .slide .img-wrap {
+        margin-top: 0;
+    }
+    .slide .img-wrap img {
+        margin: auto;
+    }
+    .slider {
+        width: 422px;
+    }
+    .slide {
+        width: 98%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    /************Меню************/
+    .page-header-top {
+        margin-right: 27px;
+    }
+    .page-header-logo span {
+        display: none;
+    }
+
+    .phone {
+        position: absolute;
+        font-size: 16px;
+        padding-left: 2px;
+    }
+
+    .page-header-logo p {
+        display: none;
+    }
+    
+    .page-header-logo img {
+        margin-top: 18px;
+    }
+    .quest-btn-wrap .order-call {
+      width: 156px;
+      font-size: 13px;
+    
+    }
+    /***************Первая секция - заставка**************/
+    h1 {
+        font-size: 22px;
+        margin: 13px 10px 0;
+    }
+
+    .top-wrap {
+        -webkit-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        transform: scale(0.85);
+        margin-top: 95px;
+    }
+
+    .top-image {
+        -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+
+    .overlay {
+        min-height: 3416px;
+    }
+
+    .bottom-line {
+        top: 3053px;
+    }
+
+    /*****************Форма заявки*****************/
+    .form-wrap label {
+        width: 220px;
+    }
+
+    /************ Наши услуги ************/
+    .boxes {
+        top: 190px;
+    }
+
+    .boxes h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box:nth-child(4),
+    .box:nth-child(8) {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .box:nth-child(3),
+    .box:nth-child(7) {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .box p {
+        font-size: 19px;
+    }
+
+    /************ Вторая секция - отзывы ************/
+    .slider {
+        width: 337px;
+    }
+    .slide-text {
+        padding: 0;
+    }
+
+    .slide-text p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /*************Третья секция - Остались вопросы*************/
+    .quest-phone-wrap {
+        padding: 0 12px;
+    }
+
+    .quest-phone-wrap p {
+        line-height: 20px;
+    }
+
+    /***************Четвертая секция - Карта***************/
+    .top-map p {
+        font-size: 20px;
+    }
+}
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+/*==========  Other Methods  ==========*/
+
+@media only screen and (min-width: 1450px) {
+    .page-header-top {
+        margin-left: 650px;
+    }
+}
+
+@media only screen and (min-width: 2120px) {
+    .page-header-top {
+        margin-left: 1000px;
+    }
+}
