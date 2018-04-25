@@ -9,21 +9,15 @@ $(document).ready(function() {
 
 /*******************  M E N U адаптивное  *******************/
 	$('button.menu-toggle').on('click', function(){
-		$('body').toggleClass('open');
-		$('body').css('overflow', 'auto');
+		$('body').addClass('open');
+		$("body").addClass("fixed");
 	});
 	$('.site-list-item').click(function() {
 		$('body').removeClass('open');
-//		$('body').css('overflow', 'auto');
+		$('body').removeClass('fixed');
 	});
-//	$('.open button.menu-toggle:after').click(function() {
-//		$('body').css('overflow', 'auto');
-//	});
-//	$('button.menu-toggle:after').click(function() {
-//		$('body').css('overflow', 'auto');
-//	});
-
-/********************   M E N U  зафиксированное  *********************/
+	
+/********************   M E N U  фиксированное  *********************/
 	if ($(window).width() > 992)   {
 		$(window).scroll(function () {
 			var scrolled = $(window).scrollTop();
@@ -51,24 +45,29 @@ $(document).ready(function() {
 		navSpeed : 600,
 		dotsSpeed : 600,
 		dragEndSpeed : 600
-
 	});
 
-	// Плавное перемещение по меню
-	$(window).resize(function() {
-		if ( $(window).width() > 768 ) {
+	/************ Плавный скролл меню ************/
 
-			$("#menu").on("click","a", function (event) {
-				event.preventDefault();
-				var id  = $(this).attr('href'),
-				top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top - 50}, 1500);
+	if( window.innerWidth >= 992 ){
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				headerHeight = $('.header').height() + 110;  
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top - headerHeight
+				}, 800, function() {
+				target.focus();
 			});
-		}
-	});
-	// animaciya
+			return false;
+			}
+			}
+		});
+	}
 
-
+	/***************** Анимация *****************/
 
 	$('.comp, .quest-phone-wrap')
 	.waypoint( function(dir) {
@@ -83,7 +82,6 @@ $(document).ready(function() {
 	}, {
 		offset: '80%'
 	})
-
 	.waypoint( function(dir) {
 		if ( dir === 'down' )
 			$(this)
@@ -110,7 +108,6 @@ $(document).ready(function() {
 	}, {
 		offset: '80%'
 	})
-
 	.waypoint( function(dir) {
 		if ( dir === 'down' )
 			$(this)
@@ -137,7 +134,6 @@ $(document).ready(function() {
 	}, {
 		offset: '80%'
 	})
-
 	.waypoint( function(dir) {
 		if ( dir === 'down' )
 			$(this)
@@ -151,8 +147,9 @@ $(document).ready(function() {
 		offset: -50
 	})
 
-	// Всплывающая форма
-	$(".order-call").click(function() {
+	/************* Всплывающая форма *************/
+
+	$(".order-call, .call").click(function() {
 		$("#callback h4").html($(this).text());
 		$("#callback input[name=formname]").val($(this).text());
 	}).magnificPopup({
@@ -160,15 +157,15 @@ $(document).ready(function() {
 		mainClass: 'mfp-forms'
 	});
 
-	//Цели для Яндекс.Метрики и Google Analytics
-	$(".count_element").on("click", (function() {
-		ga("send", "event", "goal", "goal");
-		yaCounterXXXXXXXX.reachGoal("goal");
-		return true;
-	}));
+	/********* Цели для Яндекс.Метрики и Google Analytics *********/
+	// $(".count_element").on("click", (function() {
+	// 	ga("send", "event", "goal", "goal");
+	// 	yaCounterXXXXXXXX.reachGoal("goal");
+	// 	return true;
+	// }));
 
-		//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
+    /************** Аякс отправка форм **************/
+	
 	$("form").submit(function(e) {
 		var ths = $(this);
 		e.preventDefault;
@@ -189,17 +186,9 @@ $(document).ready(function() {
 	
 });
 
+	/******* Иконка-спиннер Иконка-спиннер *******/
 
-
-	$(window).load(function() {
-
-		$(".loader_inner").fadeOut();
-		$(".loader").delay(400).fadeOut("slow");
-
-		// $(".top-header").animated("fadeInDown", "fadeOut");
-		// $(".tabs-header .wrapper").animated("flipInY", "fadeOut");
-		// // $(".request-form").animated("fadeInRight", "fadeOut");
-		// $(".request-form").animated("zoomInRight", "fadeOut");
-		// $(".questions-wrap").animated("fadeInUp", "fadeOut");
-		// $("section h2, .top-map").animated("fadeInUp", "fadeOut");
-	});
+$(window).load(function() {
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(400).fadeOut("slow");
+});
