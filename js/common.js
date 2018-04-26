@@ -8,13 +8,16 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 /*******************  M E N U адаптивное  *******************/
+	
 	$('button.menu-toggle').on('click', function(){
-		$('body').addClass('open');
-		$("body").addClass("fixed");
+		$('body').toggleClass('open');
+		$('body').toggleClass('no-scroll');
+		$('button.menu-toggle').addClass('cross');
 	});
-	$('.site-list-item').click(function() {
+
+	$('.site-list-item a, .cross').on('click', function(){
 		$('body').removeClass('open');
-		$('body').removeClass('fixed');
+		$('body').removeClass('no-scroll');
 	});
 	
 /********************   M E N U  фиксированное  *********************/

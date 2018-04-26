@@ -309,7 +309,7 @@ button.menu-toggle {
 
 .open nav:before {
     -webkit-animation: menu-animation 0.8s ease-out forwards;
-        animation: menu-animation 0.8s ease-out forwards;
+        animation: menu-animation 0.8s ease-out forwards;   
 }
 
 @-webkit-keyframes menu-animation {
@@ -431,6 +431,13 @@ button.menu-toggle {
     -webkit-transition-delay: 1.15s;
         -o-transition-delay: 1.15s;
             transition-delay: 1.15s;
+}
+
+body.no-scroll {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   overflow: hidden;
 }
 
 /*Скролл меню*/
