@@ -2,7 +2,7 @@
 
 $frm_name  = "Заявка!";
 $recepient = "melana309@gmail.com, nosha309@mail.ru, nosha_bobruysk@mail.ru";
-$sitename  = "Ремонт ккомпьютеров в Бобруйске";
+$sitename  = "Ремонт компьютеров в Бобруйске";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 $email     = "info@bobrmama.by";
 
