@@ -517,7 +517,7 @@ h1 {
 .tabs span {
     display: inline-block;
     color: #000;
-    background-color: rgba(123, 125, 128, 0.6);
+    background-color: rgba(123, 125, 128, 1);
     padding: 12px 18px;
     text-transform: uppercase;
     cursor: pointer;
@@ -657,7 +657,7 @@ img.main-arrow {
 }
 
 h4 {
-    color: #8dff07;
+    color: #00fdff;
     font-size: 25px;
     margin-top: 0;
     margin-bottom: 0;
